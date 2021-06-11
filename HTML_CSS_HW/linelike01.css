@@ -1,0 +1,27 @@
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+         }
+         body{
+             padding: 100px 0;
+         }
+        .wrap{
+            width: 1200px;
+            margin: auto;
+
+         }
+         .item{
+             display: flex;
+             align-items: center ;
+             margin-bottom: 100px;
+         }
+         .item.pic{
+             width: 55%;
+
+         }
+         .item.txt{
+             width: 55%;
+         }
+
+  
