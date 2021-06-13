@@ -4,24 +4,25 @@
             list-style: none;
          }
          body{
-             padding: 100px 0;
+             padding: 50px 0;
          }
         .wrap{
-            width: 1200px;
+            width: 1400px;
             margin: auto;
 
          }
+         
          .item{
              display: flex;
              align-items: center ;
-             margin-bottom: 100px;
+             margin: 50px;
+             margin-bottom: 50px;
+             /* border: 2px solid red; */
+             line-height: 2;
+             padding: 20px;   
+             
          }
-         .item.pic{
-             width: 55%;
-
+         .item h2{
+             color: rgb(24, 209, 0);
          }
-         .item.txt{
-             width: 55%;
-         }
-
-  
+         
