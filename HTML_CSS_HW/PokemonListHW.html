@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumentHW</title>
+</head>
+
+<body>
+    <h1>寶可夢圖鑑列表</h1>
+    <button onclick='fetchPokemon()'>載入寶可夢圖鑑列表</button>
+    <button id="btn2">載入寶可夢圖鑑列表EX2</button>
+    <button id="btn3">載入寶可夢圖鑑列表EX3</button>
+    <button id="btn4">清除</button>
+    
+
+    <div id='container'></div>
+
+    <script>
+        let container = document.getElementById('container');
+
+        window.onload = appendPokemon();
+
+        function setPokemon() {
+            let h1 = document.getElementsByTagName("h1")[0];
+            h1.innerHTML = "Pokemon圖鑑列表";
+
+            let fileName = "001";
+            let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+            let pokemonImg = `<img src='${pathFile}'>`;
+
+            container.innerHTML =  pokemonImg;
+
+        }
+
+        function fetchPokemon() {
+            container.innerHTML = "";
+
+            let pokemons = "";
+
+            for(let i = 1; i < 890 ; i++){
+                let fileName = i.toString().padStart(3,"0");
+                let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+                let pomkmonImg = `<img src='${pathFile}'>`;
+
+                pokemons += pomkmonImg;
+            }
+
+            container.innerHTML = pokemons;
+
+        }
+
+        function appendPokemon(){
+            let img = document.createElement("img");
+            img.setAttribute("SRC","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/249.png")
+
+            container.appendChild(img);
+        }
+
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function () {
+            container.innerHTML = "";
+            let pokemons = "";
+            for(let i = 1; i < 890 ; i++){
+                let fileName = i.toString().padStart(3,"0");
+                let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+                let pomkmonImg = `<img src='${pathFile}'>`;
+
+                pokemons += pomkmonImg;
+            }
+
+            container.innerHTML = pokemons;
+        }
+
+        var btn3 = document.getElementById("btn3");
+        btn3.addEventListener('click',function fetch_appendChild(){
+            container.innerHTML = "";
+            for(let i = 1; i < 890 ; i++){
+                let fileName = i.toString().padStart(3,"0");
+                let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+                let img = document.createElement("img");
+                img.setAttribute("SRC",pathFile);
+                
+                container.appendChild(img);
+            }
+            
+        })
+
+        var btn4 = document.getElementById("btn4");
+        btn4.addEventListener('click',clear_list);
+        function clear_list(){
+            container.innerHTML = "";
+        }
+
+
+    </script>
+</body>
+
+</html>
