@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS_reset.css">
+    <link rel="stylesheet" href="CSS_RWD_SURPORT.css">
+
+    <style>
+        .main_background {
+            margin: 1%;
+        }
+
+        .main_screen {
+            flex-wrap: wrap;
+            padding: 5%;
+            margin: auto;
+            width: 50%;
+            height: 10%;
+            border: 1px solid gray;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .btnS {
+            display: block;
+            margin: auto;
+        }
+
+        .box {
+            flex-wrap: wrap;
+            width: 174px;
+            height: 240px;
+            margin: auto;
+            background: #ccc;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background: rgb(85, 153, 255);
+            font-size: 50px;
+            margin: 3px;
+            border-radius: 30%;
+            text-align: center;
+            align-content: center;
+        }
+
+        .text {
+            display: block;
+            margin: 1%;
+            text-align: center;
+        }
+
+        .item:nth-child(10) {
+            color: red;
+        }
+
+        .item:nth-child(12) {
+            color: green;
+        }
+    </style>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="main_background">
+        <div id="mainS" class="main_screen">
+            請按產生數字開始猜猜!
+        </div>
+    </div>
+
+    <div class="btn_bg">
+        <button onclick="addRandom_num()" class="btnS p-3 mb-2 bg-primary text-white">
+            產生數字
+        </button>
+    </div>
+
+    <div class="text">
+        <input id="input" type="text">
+    </div>
+
+    <div class="box">
+        <button id="btn1" class="item">1</button>
+        <button id="btn2" class="item">2</button>
+        <button id="btn3" class="item">3</button>
+        <button id="btn4" class="item">4</button>
+        <button id="btn5" class="item">5</button>
+        <button id="btn6" class="item">6</button>
+        <button id="btn7" class="item">7</button>
+        <button id="btn8" class="item">8</button>
+        <button id="btn9" class="item">9</button>
+        <button id="btnX" class="item">X</button>
+        <button id="btn0" class="item">0</button>
+        <button id="btnV" class="item">V</button>
+    </div>
+
+
+
+
+    <script>
+        //產生隨機數字
+        let randomA, getRandomA;
+
+        let btnR = document.querySelectorAll("button")[0];
+        console.log(btnR);
+        btnR.onclick = function () {
+            randomA = getRandom(100);
+            btnR.innerText = "start!"
+            btnR.disabled = true;
+            console.log(randomA)
+        }
+
+        function getRandom(x) {
+            return Math.floor(Math.random() * x);
+        }
+
+        let max = 100;
+        let min = 0;
+        let range = document.getElementById("mainS");
+        range.innerText = min + "~" + max;
+        function changeRange(x) {
+            if (x > randomA) {
+                max = x;
+            }
+            else {
+                min = x;
+            }
+            range.innerText = min + "~" + max;
+        }
+
+        //設定數字按鈕功能
+        let tempInput = 0;
+        let input = document.querySelector("input");
+        function insert(num) {
+            input.innerText(tempInput + "item")
+        }
+        //清除按鈕
+        let btnX = document.getElementById("btnX");
+        btnX.addEventListener("click", clear_list);
+        function clear_list() {
+            input.value = "";
+            tempInput = 0;
+        }
+        //設定數字按鈕
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", add_1);
+        function add_1() {
+            add_num(1);
+        }
+
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", add_2);
+        function add_2() {
+            add_num(2);
+        }
+
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click", add_3);
+        function add_3() {
+            add_num(3);
+        }
+
+        let btn4 = document.getElementById("btn4");
+        btn4.addEventListener("click", add_4);
+        function add_4() {
+            add_num(4);
+        }
+
+        let btn5 = document.getElementById("btn5");
+        btn5.addEventListener("click", add_5);
+        function add_5() {
+            add_num(5);
+        }
+
+        let btn6 = document.getElementById("btn6");
+        btn6.addEventListener("click", add_6);
+        function add_6() {
+            add_num(6);
+        }
+
+        let btn7 = document.getElementById("btn7");
+        btn7.addEventListener("click", add_7);
+        function add_7() {
+            add_num(7);
+        }
+
+        let btn8 = document.getElementById("btn8");
+        btn8.addEventListener("click", add_8);
+        function add_8() {
+            add_num(8);
+        }
+
+        let btn9 = document.getElementById("btn9");
+        btn9.addEventListener("click", add_9);
+        function add_9() {
+            add_num(9);
+        }
+
+        let btn0 = document.getElementById("btn0");
+        btn0.addEventListener("click", add_0);
+        function add_0() {
+            add_num(0);
+        }
+
+        //輸入檢查
+        function add_num(btn) {
+            if (tempInput == 0) {
+                input.value = btn + "";
+                tempInput = btn;
+            }
+            else {
+                input.value = tempInput + "" + btn;
+                tempInput = tempInput + "" + btn;
+            }
+        }
+
+        //確認按鈕功能
+        let btnV = document.getElementById("btnV");
+        btnV.addEventListener("click", GO);
+        function GO() {
+            if (tempInput == randomA) {
+                alert("答對啦~" + randomA);
+                getRandomA.innerText = "產生數字";
+                getRandomA.disabled = false;
+                input.value = "";
+                tempInput = 0
+            }
+            else {
+                if (tempInput > max) {
+                    console.error(alert("超過範圍"));
+                }
+                else if (tempInput < min) {
+                    console.error(alert("不在範圍內"));
+                }
+                else {
+                    changeRange(tempInput);
+                }
+                input.value = "";
+                tempInput = 0;
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
