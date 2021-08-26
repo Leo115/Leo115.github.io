@@ -67,22 +67,37 @@
             right: 0;
             top: 10px;
         }
-        .far {
-            left: 16px;
+        .switch{
+            
+            
             position: relative;
-            color: rgb(253, 253, 253);
-            z-index: 3;
+            display: flex;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            
         }
-        .far:hover{
+        .far {
+            
+            position: absolute;
+            color: rgb(253, 253, 253);
+        }
+        
+        .switch:hover .far{
             display: none;
+        }
+        .switch:hover .fas{
+            display: block;
         }
 
         .fas {
-            position: relative;
-            color: rgb(177, 177, 177);
             
-
+            position: absolute;
+            color: rgb(177, 177, 177);
+            display: none;
         }
+        
         
         .shopNameandPoint{
             display: flex;
@@ -156,8 +171,10 @@
                             <div class="Tag">買1送1</div>
                             <div class="touchZone">
                                 <div class="favorite">
-                                    <i class="far fa-heart"></i>
-                                    <i class="fas fa-heart"></i>
+                                    <div class="switch">
+                                        <i class="far fa-heart"></i>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -175,114 +192,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="foodCard">
-                        <a href=" "></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=2">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <i class="far fa-heart"></i>
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="foodCard">
-                        <a href=" "></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=3">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <i class="far fa-heart"></i>
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="foodCard">
-                        <a href=" "></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=4">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <i class="far fa-heart"></i>
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="foodCard">
-                        <a href=" "></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=5">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <i class="far fa-heart"></i>
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
+                
                 
                 
 
