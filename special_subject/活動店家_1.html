@@ -92,7 +92,7 @@
         }
 
         .fas {
-            
+            z-index: 2;
             position: absolute;
             color: rgb(177, 177, 177);
             display: none;
@@ -164,151 +164,37 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                 <div class="col">
-                    <div class="foodCard" style="cursor:pointer;" onclick="location.href='https://www.youtube.com/watch?v=6Ib7g_6PywA';">
-                        <a href="https://www.youtube.com/watch?v=J6_G7w7Ik9w"></a>
+                    <div class="foodCard" style="cursor:pointer;" onclick="location.href='#';">
+                        <a href="#"></a>
                         <div class="headline">
                             <img src="https://picsum.photos/300/100/?random=1">
                             <div class="Tag">買1送1</div>
                             <div class="touchZone">
                                 <div class="favorite">
-                                    <div class="switch">
-                                        <i class="far fa-heart"></i>
-                                        <i class="fas fa-heart"></i>
+                                    <div class="switch" id="sw" onclick="clickChangeC()">
+                                        <i class="far fa-heart" id="far" onclick="clickChangeA()"></i>
+                                        <i class="fas fa-heart" id="fas" onclick="clickChangeB()"></i>
+                                        <!-- <i class="fas fa-heart" id="fas2" onclick="clickChangeD()"></i> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="foodText">
                             <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
+                                <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
+                                <div id="pp" class="point">4.7</div>
                             </div>
                             <div class="TWD">
-                                <span class="">55TWD 費用</span>
+                                <span id="ntd" class="">55TWD 費用</span>
                                 <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
+                                <span id="min" class="">25–35 分鐘</span>
                             </div>
                             
                         </div>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="foodCard" style="cursor:pointer;" onclick="location.href='https://www.youtube.com/watch?v=6Ib7g_6PywA';">
-                        <a href="https://www.youtube.com/watch?v=J6_G7w7Ik9w"></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=2">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <div class="switch">
-                                        <i class="far fa-heart"></i>
-                                        <i class="fas fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="foodCard" style="cursor:pointer;" onclick="location.href='https://www.youtube.com/watch?v=6Ib7g_6PywA';">
-                        <a href="https://www.youtube.com/watch?v=J6_G7w7Ik9w"></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=3">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <div class="switch">
-                                        <i class="far fa-heart"></i>
-                                        <i class="fas fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="foodCard" style="cursor:pointer;" onclick="location.href='https://www.youtube.com/watch?v=6Ib7g_6PywA';">
-                        <a href="https://www.youtube.com/watch?v=J6_G7w7Ik9w"></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=4">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <div class="switch">
-                                        <i class="far fa-heart"></i>
-                                        <i class="fas fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="foodCard" style="cursor:pointer;" onclick="location.href='https://www.youtube.com/watch?v=6Ib7g_6PywA';">
-                        <a href="https://www.youtube.com/watch?v=J6_G7w7Ik9w"></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=1">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <div class="switch">
-                                        <i class="far fa-heart"></i>
-                                        <i class="fas fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div class="shopName">Burger King漢堡王 松山店</div>
-                                <div class="point">4.7</div>
-                            </div>
-                            <div class="TWD">
-                                <span class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span class="">25–35 分鐘</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
+                
                 
                 
                 
@@ -321,7 +207,43 @@
     <footer>footer</footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
+    <Script>
+        function clickChangeC(){
+            
+            let fas = document.getElementById("fas");
+            let far = document.getElementById("far");
+            if(fas.style.display == "block"){
+                
+                fas.style.display = "none"
+                fas.style.color = "gray"
+                far.style.display = "block"
+                console.log("C");
+            }
+            else{
+                fas.style.display = "block"
+                fas.style.color = "white"
+                far.style.display = "none"
+            }
+            
+            // if(sw == onclick){
+            //     console.log("K");
+            //     fas.style.display = "block"
+            // }
+            
+            
+            
+            
+            
+        };
+        // function clickChangeB(){
+        //     console.log("B");
+        //     // let fas = document.getElementById("fas");
+        //     // fas.style.display = "block"
+        //     // fas.style.color = "white"
+            
+        // };
 
+    </Script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
