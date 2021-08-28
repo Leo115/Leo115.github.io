@@ -37,6 +37,7 @@
             margin: 0 16px;
             white-space: pre-wrap;
         }
+        
         .Tag{
             line-height: 16px;
             display: inline-block;
@@ -52,24 +53,29 @@
         .headline{
             position: relative;
         }
+        .col{
+            display: flex;
+            position: relative;
+        }
         .touchZone{
-            
-            background-color: #000000;
-            
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+        .foodCard{
+            width: 100%;
         }
         .favorite{
             display: flex;
             height: 28px;
             width: 50px;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             position: absolute;
             right: 0;
             top: 10px;
         }
         .switch{
-            
-            
             position: relative;
             display: flex;
             width: 20px;
@@ -78,20 +84,27 @@
             align-items: center;
             
         }
-        .far {
-            
+        
+        .hSolid4hover {
+            z-index: 2;
+            position: absolute;
+            color: rgb(177, 177, 177);
+            display: none;
+        }
+        .hEmpty {
             position: absolute;
             color: rgb(253, 253, 253);
         }
         
-        .switch:hover .far{
+        .switch:hover .hEmpty{
             display: none;
         }
-        .switch:hover .fas{
+        .switch:hover .hSolid4hover{
+            z-index: 2;
             display: block;
         }
 
-        .fas {
+        .hSolid {
             z-index: 2;
             position: absolute;
             color: rgb(177, 177, 177);
@@ -107,6 +120,7 @@
             align-items: center;
             flex-flow: wrap row;
             justify-content: space-between;
+            color: black;
         }
         .point{
             display: flex;
@@ -126,6 +140,7 @@
         }
         .TWD{
             display: flex;
+            color: black;
         }
         .dotSpace{
             margin: 0 10px 0 10px;
@@ -162,40 +177,43 @@
         </div>
 
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
+            <div class="row row-cols-1  row-cols-lg-3 ">
                 <div class="col">
-                    <div class="foodCard" style="cursor:pointer;" onclick="location.href='#';">
-                        <a href="#"></a>
-                        <div class="headline">
-                            <img src="https://picsum.photos/300/100/?random=1">
-                            <div class="Tag">買1送1</div>
-                            <div class="touchZone">
-                                <div class="favorite">
-                                    <div class="switch" id="sw" onclick="clickChangeC()">
-                                        <i class="far fa-heart" id="far" ></i>
-                                        <i class="fas fa-heart" id="fas" ></i>
-                                        <i class="fas fa-heart" id="fas2"></i>
-                                    </div>
+                    <div class="foodCard" style="cursor:pointer;">
+                        <a href="#" style="text-decoration:none;">
+                            <div class="headline">
+                                <img src="https://picsum.photos/300/100/?random=1">
+                                <div class="Tag">買1送1</div>
+                            </div>
+                            <div class="foodText">
+                                <div class="shopNameandPoint">
+                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
+                                    <div id="pp" class="point">4.7</div>
+                                </div>
+                                <div class="TWD">
+                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <div class="dotSpace"><span class="dot"> • </span></div>
+                                    <span id="min" class="">25–35 分鐘</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="foodText">
-                            <div class="shopNameandPoint">
-                                <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                <div id="pp" class="point">4.7</div>
+                        </a>
+                    </div>
+                    <div class="touchZone" style="cursor:pointer;">
+                        <div class="favorite">
+                            <div class="switch" id="sw" onclick="clickChangeC()">
+                                <!-- 空心 -->
+                                <i class="far fa-heart hEmpty"></i>
+                                <!-- 實心 -->
+                                <i class="fas fa-heart hSolid"></i>
+                                <i class="fas fa-heart hSolid4hover"></i>
                             </div>
-                            <div class="TWD">
-                                <span id="ntd" class="">55TWD 費用</span>
-                                <div class="dotSpace"><span class="dot"> • </span></div>
-                                <span id="min" class="">25–35 分鐘</span>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
 
                 
                 
+
                 
                 
 
@@ -210,10 +228,9 @@
     <Script>
         function clickChangeC(){
             
-            let fas = document.getElementById("fas");
-            let far = document.getElementById("far");
+            let fas = document.querySelector(".hSolid");
+            let far = document.querySelector(".hEmpty");
             if(fas.style.display == "block"){
-                
                 fas.style.display = "none"
                 fas.style.color = "gray"
                 far.style.display = "block"
@@ -223,8 +240,8 @@
                 fas.style.display = "block"
                 fas.style.color = "white"
                 far.style.display = "none"
+                console.log("D");
             }
-            
         };
         
 
