@@ -33,6 +33,9 @@
             max-width: 98%;
         }
 
+        .title{
+            margin: 20px 0 20px 0;
+        }
         .p1 {
             margin: 0 16px;
             white-space: pre-wrap;
@@ -54,6 +57,7 @@
             position: relative;
         }
         .col{
+            margin-bottom: 30px;
             display: flex;
             position: relative;
         }
@@ -94,6 +98,7 @@
         .hEmpty {
             position: absolute;
             color: rgb(253, 253, 253);
+            display: none;
         }
         
         .switch:hover .hEmpty{
@@ -108,9 +113,8 @@
             z-index: 2;
             position: absolute;
             color: rgb(253, 253, 253);
-            display: none;
+            display: block;
         }
-        
         
         .shopNameandPoint{
             display: flex;
@@ -135,9 +139,7 @@
         .shopName{
             font-size: 20px;
         }
-        .col{
-            margin-bottom: 30px;
-        }
+        
         .TWD{
             display: flex;
             color: black;
@@ -149,31 +151,16 @@
 
     </style>
 
-    <title>活動店家!</title>
+    <title>最愛餐廳!</title>
 </head>
 
 <body>
     <header>header</header>
 
     <main>
+        <!-- 區段1 -->
         <div class="container">
-            <p class="p1">
-【來點好食在的漢堡王買一送一！】
-
-8/ 25 起至 9/7，於漢堡王選擇 花生培根脆雞堡 享買一送一！
-香濃花生醬搭配經典酥炸脆雞，濃郁的魅力就在 Uber Eats！
-
-⚠️注意事項 ⚠️
-* 活動期間為 2021/08/25 -2021/09/07
-* 本優惠活動，買一送一餐點，數量有限，售完為止
-* 活動期間每人於每家指定活動餐廳僅限使用本活動乙次，即僅限於該家指定活動餐廳取得買一送一餐點優惠乙次
-* 活動內容為每兩個活動單品可享一個免費，以此類推每四個單品則兩個免費。惟活動單品訂購數量若為奇數，則僅有成對部分享有優惠，例如，每五個單品則兩個免費
-* 買一送一活動不包含客製化加價項目，加價項目需依加價商品數量另外付費
-* 各別餐廳優惠不同，以各別餐廳實際優惠情形為主
-* 本活動優惠可與優饗方案及其他優惠序號同時使用
-* 本活動之品項金額不納入其他優惠折抵之計算
-* Uber Eats 保有對本優惠之所有解釋、修改、調整、終止等相關權利，未盡事宜則以 Uber Eats App 內公告為主
-            </p>
+            <h1 class="title">近期新增</h1>
         </div>
 
         <div class="container">
@@ -315,6 +302,30 @@
 
             </div>
         </div>
+
+        <!-- 區段2 -->
+        <div class="container">
+            <h1 class="title">X</h1>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-1  row-cols-lg-3 ">
+
+            </div>
+        </div>
+
+        <!-- 區段3 -->
+        <div class="container">
+            <h1 class="title">無法提供</h1>
+        </div>
+        
+        <div class="container">
+            <div class="row row-cols-1  row-cols-lg-3 ">
+
+            </div>
+        </div>
+
+
     </main>
 
 
@@ -327,16 +338,19 @@
             let solid = event.path[1].childNodes[7];
             let empty = event.path[1].childNodes[3];
         
-
+            console.log(solid)
+            //console.log(solid.style);
             if(solid.style.display == "block"){
                 solid.style.display = "none"
                 empty.style.display = "block"
                 console.log("C");
+                console.log(solid)
             }
             else{
                 solid.style.display = "block"
                 empty.style.display = "none"
                 console.log("D");
+                console.log(solid)
             }
         };
         
