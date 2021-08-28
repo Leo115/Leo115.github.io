@@ -324,18 +324,20 @@
     <Script>
         function clickChangeC(){
             
-            let fas = document.querySelector(".hSolid");
-            let far = document.querySelector(".hEmpty");
-            if(fas.style.display == "block"){
-                fas.style.display = "none"
-                fas.style.color = "gray"
-                far.style.display = "block"
+            let solid = event.path[1].childNodes[7];
+            let empty = event.path[1].childNodes[3];
+        
+
+            if(solid.style.display == "block"){
+                solid.style.display = "none"
+                solid.style.color = "gray"
+                empty.style.display = "block"
                 console.log("C");
             }
             else{
-                fas.style.display = "block"
-                fas.style.color = "white"
-                far.style.display = "none"
+                solid.style.display = "block"
+                solid.style.color = "white"
+                empty.style.display = "none"
                 console.log("D");
             }
         };
