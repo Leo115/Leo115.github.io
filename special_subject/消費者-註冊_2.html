@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/CSS_reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .top {
+            margin: 36px auto 0 auto;
+            max-width: 200px;
+            min-width: 200px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .bottom {
+            margin: auto;
+            max-width: 289px;
+            /* max-width: calc(100vw - 32px); */
+            min-width: 289px;
+            /* margin-top: 36px; */
+            /* min-height: 485px; */
+        }
+
+        h4 {
+            margin: 18px auto;
+        }
+
+        .colInfo {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .phText {
+            margin: auto;
+            max-width: 289px;
+            min-width: 289px;
+            margin-bottom: 8px;
+        }
+
+        .inputPhonenumber {
+            margin: auto;
+            margin-bottom: 12px;
+            display: flex;
+            max-width: 289px;
+            min-width: 289px;
+            justify-content: center;
+
+        }
+
+        .inputName {
+            display: flex;
+        }
+
+        input {
+            margin: 0;
+            max-width: 75%;
+
+        }
+
+        button {
+            margin-top: 24px;
+        }
+
+        .bt1 {
+            display: block;
+        }
+
+        .bt2 {
+            display: none;
+        }
+
+
+
+        .signText {
+            margin: 24px auto;
+            text-align: center;
+        }
+
+        .ftText {
+            font-size: 12px;
+            color: rgb(255, 253, 253);
+            padding: 16px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            height: 600px;
+        }
+
+        .inc {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: rgb(255, 253, 253);
+        }
+
+        .btn {
+            background-color: rgb(255, 205, 0);
+        }
+
+        .btn:hover {
+            background-color: #FFC20E;
+        }
+
+        .greenLink {
+            color: rgb(49, 75, 88);
+        }
+
+        @media screen and (max-width:768px) {}
+
+
+        @media screen and (max-width:992px) {
+            .bottom {
+                margin: auto;
+                max-width: 289px;
+                min-width: 289px;
+                /* margin-top: 36px; */
+                /* min-height: 577px; */
+            }
+        }
+    </style>
+
+    <title>註冊!</title>
+</head>
+
+<body>
+    <!-- <header>header</header> -->
+
+    <main>
+        <div class="core">
+            <div class="combined">
+                <!-- 區段 上
+                <div class="top">
+                    <img src="/專題切版/messageImage_1630414816986_kai.jpg" alt="">
+                </div> -->
+                <!-- 區段 下-->
+                <div class="bottom">
+                    <div>
+                        <h4 class="title">開始註冊</h4>
+                        <div class="colInfo">
+                            <div class="phText">請輸入您的手機號碼(必填)</div>
+                            <div class="inputPhonenumber">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option selected>+886</option>
+                                    <option value="1">+817</option>
+                                    <option value="2">+816</option>
+                                    <option value="3">+815</option>
+                                </select>
+                                <input></input>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputLastname4">名字(必填)</label>
+                                    <input type="text" class="form-control" id="inputLastname" >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputFirstname4">姓氏(必填)</label>
+                                    <input type="text" class="form-control" id="inputFirstname" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail4">信箱(必填)</label>
+                                <input type="text" class="form-control" id="inputEmail">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword4">密碼(必填)</label>
+                                <input type="password" class="form-control" id="inputPassword">
+                            </div>
+                            <button type="button" class="btn btn-lg" id="nextStep">下一步</button>
+                            <!-- <button type="button" class="btn btn-secondary btn-lg btn2" >下一步</button> -->
+
+                        </div>
+                        <div class="signText">Already use Holy Shong?
+                            <a href="#" class="greenLink">Sign in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer></footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <Script>
+        window.onload = function(){
+            buttonActive();
+        }
+        function buttonActive(){
+            // let nameElement = document.getElementById("inputFirstname").value;
+            let nameElement = document.getElementsByTagName("input")[2].value;
+            console.log(nameElement);
+            var btn = document.querySelector('button');
+            console.log(btn);
+            //console.log(nameElement);
+
+            if(nameElement == null ){
+                console.log("doDisable")
+                
+                // document.getElementById("nextStep").disabled = true;
+                document.getElementById("nextStep").setAttribute("class","btn btn-lg")
+            }
+            else{
+                console.log("else")
+                // document.getElementById("nextStep").disabled = false;
+                // document.getElementById("nextStep").setAttribute("class","btn btn-lg btn-secondary")
+            }
+        } 
+    </Script>
+
+    <script>
+        let btn;
+
+        btn = document.querySelector('#nextStep');
+        console.log(btn);
+        let nameElement = document.getElementById("inputFirstname").value;
+        let firstNameElement = document.getElementById("inputLastname").value;
+        
+
+        if(nameElement!==null && firstNameElement !==null){
+            btn.disabled=false;
+        }
+    </script>
+
+
+    
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
