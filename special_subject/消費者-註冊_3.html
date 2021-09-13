@@ -192,25 +192,13 @@
         const emailElement = document.getElementById("inputEmail");
         const passElement = document.getElementById("inputPassword");
 
-        phoneElement.addEventListener("change", function (event){
-            buttonActive();
-        });
+        const inputElements = [phoneElement, fnameElement, lnameElement, emailElement, passElement]
 
-        fnameElement.addEventListener("change", function (event){
-            buttonActive();
-        });
-
-        lnameElement.addEventListener("change", function (event){
-            buttonActive();
-        });
-
-        emailElement.addEventListener("change", function (event){
-            buttonActive();
-        });
-
-        passElement.addEventListener("change", function (event){
-            buttonActive();
-        });
+        for(var i = 0; i < inputElements.length; i++){
+                inputElements[i].addEventListener("change", function (event){
+                buttonActive();
+            });
+        }
 
         function buttonActive(){
             if (phoneElement.value!="" && fnameElement.value!="" && lnameElement.value!="" && emailElement.value!="" && passElement.value!="") {
