@@ -202,13 +202,13 @@
 
         function buttonActive(){
             if (phoneElement.value!="" && fnameElement.value!="" && lnameElement.value!="" && emailElement.value!="" && passElement.value!="") {
-                console.log("ableBtn")
+                //console.log("ableBtn")
                 document.getElementById("nextStep").disabled = false;
                 document.getElementById("nextStep").setAttribute("class","btn btn-lg btn-warning")
 
             }
             else {
-                console.log("doDisable")
+                //console.log("doDisable")
                 document.getElementById("nextStep").disabled = true;
                 document.getElementById("nextStep").setAttribute("class","btn btn-lg btn-secondary")
             }
