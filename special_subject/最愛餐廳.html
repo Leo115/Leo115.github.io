@@ -12,17 +12,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
-        header {
+        /* header {
             height: 100px;
+            width: 100%;
             background-color: #ccc;
             font-size: 50px;
         }
 
         footer {
             height: 600px;
+            width: 100%;
             background-color: #ccc;
             font-size: 50px;
-        }
+        } */
 
         .pic {
             width: 100%;
@@ -32,20 +34,17 @@
             display: block;
             max-width: 98%;
             width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
             margin-right: auto;
             margin-left: auto;
         }
-
+        .row{
+                margin-left: 0;
+                margin-right: 0;
+            }
         .titleService{
             margin: 20px 0 20px 0;
         }
-        .p1 {
-            margin: 0 16px;
-            white-space: pre-wrap;
-        }
-        
+                
         .Tag{
             line-height: 16px;
             display: inline-block;
@@ -61,12 +60,11 @@
         .headline{
             position: relative;
         }
+        
         .cardCol{
             margin-bottom: 30px;
             display: flex;
             position: relative;
-            padding-right: 15px;
-            padding-left: 15px;
         }
         .touchZone{
             position: absolute;
@@ -95,7 +93,6 @@
             align-items: center;
             
         }
-        
         .hSolid4hover {
             z-index: 2;
             position: absolute;
@@ -115,14 +112,12 @@
             z-index: 2;
             display: block;
         }
-
         .hSolid {
             z-index: 2;
             position: absolute;
             color: rgb(253, 253, 253);
             display: block;
         }
-        
         .shopNameandPoint{
             display: flex;
             font-weight: 500;
@@ -154,7 +149,33 @@
         .dotSpace{
             margin: 0 10px 0 10px;
         }
-        
+        @media screen and (max-width:992px) {
+            .favoriteHeart{
+            display: flex;
+            height: 28px;
+            width: 50px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            .titleService{
+            margin: 20px 0 20px 0;
+            padding: 0 15px 0 15px;
+            }
+            .cardCol{
+            margin-bottom: 30px;
+            display: flex;
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+            }
+            
+        }
 
     </style>
 
@@ -162,7 +183,7 @@
 </head>
 
 <body>
-    <header>header</header>
+    <!-- <header>header</header> -->
 
     <main>
         <!-- 區段1 -->
@@ -396,7 +417,7 @@
     </main>
 
 
-    <footer>footer</footer>
+    <!-- <footer>footer</footer> -->
 
     <!-- Optional JavaScript; choose one of the two! -->
     <Script>
@@ -410,14 +431,14 @@
             if(solid.style.display == "block"){
                 solid.style.display = "none"
                 empty.style.display = "block"
-                console.log("C");
-                console.log(solid)
+                // console.log("C");
+                // console.log(solid)
             }
             else{
                 solid.style.display = "block"
                 empty.style.display = "none"
-                console.log("D");
-                console.log(solid)
+                // console.log("D");
+                // console.log(solid)
             }
         };
         
