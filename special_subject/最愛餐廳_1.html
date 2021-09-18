@@ -12,24 +12,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
-        /* header {
-            height: 100px;
-            width: 100%;
-            background-color: #ccc;
-            font-size: 50px;
-        }
-
-        footer {
-            height: 600px;
-            width: 100%;
-            background-color: #ccc;
-            font-size: 50px;
-        } */
-
         .pic {
             width: 100%;
         }
-
+        .dark{
+            position: absolute;
+            background-color: rgba(24, 24, 24, 0.788);
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: none;
+        }
         .unitContainer {
             display: block;
             max-width: 98%;
@@ -199,24 +196,25 @@
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=1">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -232,24 +230,25 @@
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=2">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -265,24 +264,25 @@
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=3">
-                                <div class="Tag">買1送1買1送1買1送1</div>
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
+                                <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -292,29 +292,31 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="cardCol">
                     <div class="foodCard" style="cursor:pointer;">
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=4">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -324,6 +326,8 @@
                         </div>
                     </div>
                 </div>
+
+                
 
 
             </div>
@@ -340,25 +344,60 @@
                     <div class="foodCard" style="cursor:pointer;">
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
-                                <img class="pic" src="https://picsum.photos/300/100/?random=1">
+                                <img class="pic" src="https://picsum.photos/300/100/?random=5">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
+                                <!-- 空心 -->
+                                <i class="far fa-heart hEmpty"></i>
+                                <!-- 實心 -->
+                                <i class="fas fa-heart hSolid"></i>
+                                <i class="fas fa-heart hSolid4hover"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cardCol">
+                    <div class="foodCard" style="cursor:pointer;">
+                        <a href="#" style="text-decoration:none;">
+                            <div class="headline">
+                                <img class="pic" src="https://picsum.photos/300/100/?random=6">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
+                                <div class="Tag">買1送1</div>
+                            </div>
+                            <div class="foodText">
+                                <div class="shopNameandPoint">
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
+                                </div>
+                                <div class="TWD">
+                                    <span class="ntd">55TWD 費用</span>
+                                    <div class="dotSpace"><span class="dot"> • </span></div>
+                                    <span class="min">25–35 分鐘</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="touchZone" style="cursor:pointer;">
+                        <div class="favoriteHeart">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -373,7 +412,7 @@
 
         <!-- 區段3 -->
         <div class="unitContainer">
-            <h1 class="titleService">無法提供</h1>
+            <h1 class="titleService">目前無法供應</h1>
         </div>
             
         <div class="unitContainer">
@@ -382,25 +421,26 @@
                     <div class="foodCard" style="cursor:pointer;">
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
-                                <img class="pic" src="https://picsum.photos/300/100/?random=8">
+                                <img class="pic" src="https://picsum.photos/300/100/?random=7">
+                                <div class="dark" id="serviceOff"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -421,27 +461,29 @@
 
     <!-- Optional JavaScript; choose one of the two! -->
     <Script>
+
+        window.onload = function(){
+            canntService();
+        }
+
         function clickChangeC(){
-            
             let solid = event.path[1].childNodes[7];
             let empty = event.path[1].childNodes[3];
-        
-            console.log(solid)
-            //console.log(solid.style);
+
             if(solid.style.display == "block"){
                 solid.style.display = "none"
                 empty.style.display = "block"
-                // console.log("C");
-                // console.log(solid)
             }
             else{
                 solid.style.display = "block"
                 empty.style.display = "none"
-                // console.log("D");
-                // console.log(solid)
             }
         };
         
+        function canntService(){
+            let darkOn = document.getElementById("serviceOff");
+            darkOn.style.display = "flex"
+        };
 
     </Script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
