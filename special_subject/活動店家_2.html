@@ -13,26 +13,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
-        
         .pic {
             width: 100%;
         }
-
+        .dark{
+            position: absolute;
+            background-color: rgba(24, 24, 24, 0.788);
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: none;
+        }
         .unitContainer {
             display: block;
             max-width: 98%;
             width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
             margin-right: auto;
             margin-left: auto;
         }
-
+        .row{
+                margin-left: 0;
+                margin-right: 0;
+            }
         .p1 {
             margin: 0 16px;
             white-space: pre-wrap;
         }
-
         .Tag {
             line-height: 16px;
             display: inline-block;
@@ -45,29 +55,22 @@
             left: 0;
             top: 10px;
         }
-
         .headline {
             position: relative;
         }
-
         .cardCol {
             margin-bottom: 30px;
             display: flex;
             position: relative;
-            padding-right: 15px;
-            padding-left: 15px;
         }
-
         .touchZone {
             position: absolute;
             top: 0;
             right: 0;
         }
-
         .foodCard {
             width: 100%;
         }
-
         .favoriteHeart {
             display: flex;
             height: 28px;
@@ -78,7 +81,6 @@
             right: 0;
             top: 10px;
         }
-
         .switchP {
             position: relative;
             display: flex;
@@ -86,37 +88,30 @@
             height: 20px;
             justify-content: center;
             align-items: center;
-
         }
-
         .hSolid4hover {
             z-index: 2;
             position: absolute;
             color: rgb(177, 177, 177);
             display: none;
         }
-
         .hEmpty {
             position: absolute;
             color: rgb(253, 253, 253);
         }
-
         .switchP:hover .hEmpty {
             display: none;
         }
-
         .switchP:hover .hSolid4hover {
             z-index: 2;
             display: block;
         }
-
         .hSolid {
             z-index: 2;
             position: absolute;
             color: rgb(253, 253, 253);
             display: none;
         }
-
         .shopNameandPoint {
             display: flex;
             font-weight: 500;
@@ -127,7 +122,6 @@
             justify-content: space-between;
             color: black;
         }
-
         .point {
             display: flex;
             height: 28px;
@@ -138,18 +132,42 @@
             justify-content: center;
             align-items: center;
         }
-
         .shopName {
             font-size: 20px;
         }
-
         .TWD {
             display: flex;
             color: black;
         }
-
         .dotSpace {
             margin: 0 10px 0 10px;
+        }
+        @media screen and (max-width:992px) {
+            .favoriteHeart{
+            display: flex;
+            height: 28px;
+            width: 50px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            .titleService{
+            margin: 20px 0 20px 0;
+            padding: 0 15px 0 15px;
+            }
+            .cardCol{
+            margin-bottom: 30px;
+            display: flex;
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+            }
+            
         }
     </style>
 
@@ -188,24 +206,25 @@
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=1">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -221,24 +240,25 @@
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=2">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -254,24 +274,25 @@
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=3">
-                                <div class="Tag">買1送1買1送1買1送1</div>
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
+                                <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -281,29 +302,31 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="cardCol">
                     <div class="foodCard" style="cursor:pointer;">
                         <a href="#" style="text-decoration:none;">
                             <div class="headline">
                                 <img class="pic" src="https://picsum.photos/300/100/?random=4">
+                                <div class="dark"><i class="fas fa-moon"></i>已關閉</div>
                                 <div class="Tag">買1送1</div>
                             </div>
                             <div class="foodText">
                                 <div class="shopNameandPoint">
-                                    <div id="spName" class="shopName">Burger King漢堡王 松山店</div>
-                                    <div id="pp" class="point">4.7</div>
+                                    <div class="shopName">Burger King漢堡王 松山店</div>
+                                    <div class="point">4.7</div>
                                 </div>
                                 <div class="TWD">
-                                    <span id="ntd" class="">55TWD 費用</span>
+                                    <span class="ntd">55TWD 費用</span>
                                     <div class="dotSpace"><span class="dot"> • </span></div>
-                                    <span id="min" class="">25–35 分鐘</span>
+                                    <span class="min">25–35 分鐘</span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="touchZone" style="cursor:pointer;">
                         <div class="favoriteHeart">
-                            <div class="switchP" id="sw" onclick="clickChangeC()">
+                            <div class="switchP" onclick="clickChangeC()">
                                 <!-- 空心 -->
                                 <i class="far fa-heart hEmpty"></i>
                                 <!-- 實心 -->
@@ -333,12 +356,10 @@
             if (solid.style.display == "block") {
                 solid.style.display = "none"
                 empty.style.display = "block"
-                console.log("C");
             }
             else {
                 solid.style.display = "block"
                 empty.style.display = "none"
-                console.log("D");
             }
         };
     </Script>
